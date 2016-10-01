@@ -1,0 +1,10 @@
+[Unit]
+Description=Energy monitor: reads from the analog GPIO and pushes results to an online service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/energymon
+User=energymon
+
+[Install]
+WantedBy=default.target
